@@ -46,10 +46,12 @@
             const timerDisplay = document.getElementById('timer');
 
             const updateTimer = () => {
-                const minutes = Math.floor(secondsLeft / 60);
+                const hours = Math.floor(secondsLeft / 3600);
+                const minutes = Math.floor((secondsLeft % 3600) / 60);
                 const seconds = secondsLeft % 60;
 
                 timerDisplay.innerText =
+                    (hours < 10 ? '0' : '') + hours + ':' +
                     (minutes < 10 ? '0' : '') + minutes + ':' +
                     (seconds < 10 ? '0' : '') + seconds;
 
@@ -69,3 +71,4 @@
     </script>
 </body>
 </html>
+
