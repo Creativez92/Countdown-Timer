@@ -8,12 +8,19 @@
     <style>
         body {
             display: flex;
+            flex-direction: column; /* Arrange items vertically */
             justify-content: center;
             align-items: center;
             height: 100vh;
             font-family: Arial, sans-serif;
             background-color: #333333; /* Dark grey background */
             margin: 0; /* Remove default margin */
+            color: white; /* Default text color for the header */
+        }
+        #header {
+            font-size: 2em; /* Large text size for the header */
+            margin-bottom: 20px; /* Space between header and timer */
+            text-align: center; /* Center-align the header text */
         }
         #timer {
             font-size: 4em; /* Larger timer font size */
@@ -26,6 +33,7 @@
     </style>
 </head>
 <body>
+    <div id="header">Once Human Loot Respawn</div>
     <div id="timer">Loading...</div>
     <script>
         const { DateTime } = luxon;
